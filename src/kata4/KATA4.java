@@ -11,36 +11,7 @@ public class KATA4 {
         ArrayList<String> mailArray=MailListReader.read(nameFile);
         System.out.println(mailArray.size());
 
-        Histogram<String> histogram= new Histogram<>();
-        histogram.increment("gmail.com");
-        histogram.increment("gmail.com");
-        histogram.increment("gmail.com");
-        histogram.increment("gmail.com");
-        histogram.increment("gmail.com");
-        histogram.increment("gmail.com");
-        histogram.increment("gmail.com");
-        histogram.increment("ulpgc.es");
-        histogram.increment("ulpgc.es");
-        histogram.increment("ulpgc.es");
-        histogram.increment("ulpgc.es");
-        histogram.increment("ulpgc.es");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        histogram.increment("hotmail.com");
-        
+        Histogram<String> histogram= new MailHistogramBuilder().build(mailArray);
         new HistogramDisplay(histogram).execute();
         
     }
